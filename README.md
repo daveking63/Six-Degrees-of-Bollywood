@@ -15,14 +15,26 @@ At the moment the project and research is in the initial stage (i.e. constructin
 
 <h3>Constructing the Data Set</h3>
 
-The data set underlying this research is in the process of being constructed.  The foundation for the data set comes from a wikipedia page indexing the <a href="https://en.wikipedia.org/wiki/Lists_of_Bollywood_films">Lists of Bollywood Films</a> for the years from 1940 to 2018. For the moment, I'm leaving the earlier years from 1940-1969 for future analysis, primarily because it is extremely tedious and labor intensive working with the wide variety of data formats, missing data, and errors found in even smaller subsets of the films in these lists. \[Note: the IMDB data sets provide info about Bollywood films and actors but it is not as comprehensive as the lists provided in Wikipedia.]
+The data set underlying this research is in the process of being constructed.  The foundation for the data set comes from a wikipedia page indexing the <a href="https://en.wikipedia.org/wiki/Lists_of_Bollywood_films">Lists of Bollywood Films</a> for the years from 1940 to 2018. For the moment, I'm leaving the earlier years from 1940-1969 for future analysis, primarily because it is extremely tedious and labor intensive working with the wide variety of data formats, missing data, and errors found in even smaller subsets of the films in these lists. \[Note: the IMDB data sets provide info about Bollywood films and actors, but it is not as comprehensive as the lists provided in Wikipedia.]
 
-Each entry in the <i>Lists</i> designates a link to a wikipedia page devoted Bollywood films for a single year. The structure of all the links is simple (e.g. the link for 2018 is wikipedia.org/wiki/List_of_Bollywood_films_of_2018). This makes it straightforward to write a program to download a page, which is what I did -- see  
+Each entry in the <i>Lists</i> designates a link to a wikipedia page devoted to the Bollywood films for a single year. The structure of all the links is simple (e.g. the link for 2018 is wikipedia.org/wiki/List_of_Bollywood_films_of_2018). This makes it straightforward to write a program to download each of the 50 pages in this sample, which is what I did -- see the python (3.+) program <i>retrieveListofBollywoodFilmsbyYear.py</i> in this repository. Once the pages were downloaded they are each stored in a local file for further analysis.
 
-Each webpage contains a table of information detailing
-the title, director, cast and genre of every movie made in during the year.https://en.wikipedia.org/wiki/List_of_Bollywood_films_of_2018
-Once the pages are retrieved they are each stored in a local file for further
-analysis.
+Each webpage contains an HTML table of information where the each row (<tr>...</tr>) represents a single film, while the collection of  cells (<td>..</td>) within the row contains at a minimum information about the:
+
+<ul>
+<li> title and an underlying HTML link to a wikipedia page devoted to that title
+<li> director
+<li> cast
+<li> one or more genres describing the films (e.g. Romance, Drama, Comedy, etc.)
+</ul>
+
+I use the words "collection" and "minimum" purposively because the order, specific HTML syntax used with the cells, as well as the exact number of features included in the rows, varied substantially from one decade and often one year to the next, although the title always comes first and the 4 features listed above are always included with blank cells denoting missing data.
+
+Again, a program was used to extract the rows for each of the 50 tables and to create a consolidated tab-separated for all of the moview for all of the years.
+
+and the exact list of features provided in the table, and the exact list of features provided in the table
+  of the associated movie (and depending on the years other sorts of features like the production house). I use the word "collection" because the exact order of 
+. As note
 
 An index of all the pages is found here:
 
