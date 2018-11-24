@@ -1,7 +1,7 @@
 # Six-Degrees-of-Bollywood
 Think of 6 Degrees of Kevin Bacon -- only this time, it's a social network analysis (SNA) of the actors and directors of Bollywood films from 1970 to the present.
 
-This project looks at the social networks among the cast and directors of Bollywood films for the 50 years from 1970-2018 (the modern era).  It is a reincarnation and expansion of an earlier project that was part of a tutorial on social network analysis (SNA) conducted at HICSS-47 (2014). That tutorial looked at social networks in Bollywood movies for a small sample of films from 2008-2013. The slides from that earlier tutorial are provided here for reference. This current rendition expands the sample size of from 6 to 50.
+This project looks at the social networks among the cast and directors of Bollywood films for the 50 years from 1970-2018 (the modern era).  It is a reincarnation and expansion of an earlier project that was part of a tutorial on social network analysis (SNA) that I conducted at HICSS-47 (2014). That tutorial looked at social networks in Bollywood movies for a small sample of films from 2008-2013. The slides from that earlier tutorial are provided here for reference. This current rendition expands the sample size of from 6 to 50.
 
 The genesis of that intial project ,as well as this expansion, is found not only in the simple games, applications, and research revolving around the "Six Degrees of Kevin Bacon" (based on Hollywood films), but also the larger body of SNA including the concepts of degrees of separation, clustering, and small world networks:
 
@@ -19,7 +19,7 @@ The data set underlying this research is in the process of being constructed.  T
 
 Each entry in the <i>Lists</i> designates a link to a wikipedia page devoted to the Bollywood films for a single year. The structure of all the links is simple (e.g. the link for 2018 is wikipedia.org/wiki/List_of_Bollywood_films_of_2018). This makes it straightforward to write a program to download each of the 50 pages in this sample, which is what I did -- see the python (3.+) program in this repository labeled <a href='https://github.com/daveking63/Six-Degrees-of-Bollywood/blob/master/retrieveListofBollywoodFilmsbyYear.py'><i>retrieveListofBollywoodFilmsbyYear.py</i></a>. Once the pages were downloaded, they were each stored in a local (HTML) file for further analysis.
 
-Each webpage contains an HTML table of information with each row (<tr>...</tr>) representing a single film, while the collection of  cells (<td>..</td>) within the row contains at a minimum information about the film's:
+Each of the downloaded webpages contains an HTML table of information with each row \(<tr>...</tr>)\ representing a single film, while the collection of  cells (<td>..</td>) within each row contains (at a minimum) information about the film's:
 
 <ul>
 <li> title and an underlying HTML link to a wikipedia page devoted to that title
