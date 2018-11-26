@@ -19,7 +19,7 @@ The data set underlying this research is in the process of being constructed.  T
 
 Each entry in the <i>Lists</i> designates a link to a wikipedia page devoted to the Bollywood films for a single year. The structure of all the links is simple (e.g. the link for 2018 is wikipedia.org/wiki/List_of_Bollywood_films_of_2018). This makes it straightforward to write a program to download each of the 50 pages in this sample, which is what I did -- see the python (3.+) program in this repository labeled <a href='https://github.com/daveking63/Six-Degrees-of-Bollywood/blob/master/retrieveListofBollywoodFilmsbyYear.py'><i>retrieveListofBollywoodFilmsbyYear.py</i></a>. Once the pages were downloaded, they were each stored in a local (HTML) file for further analysis.
 
-Each of the downloaded webpages contains an HTML table of information with each row \(<tr>...</tr>)\ representing a single film, while the collection of  cells (<td>..</td>) within each row contains (at a minimum) information about the film's:
+Each of the downloaded webpages contains an HTML table of information with each row (**<tr>...</tr>**) representing a single film, while the collection of  cells (<td>..</td>) within each row contains (at a minimum) information about the film's:
 
 <ul>
 <li> title and an underlying HTML link to a wikipedia page devoted to that title
