@@ -2,20 +2,21 @@
 The local files accessed by this program were originally retrieved from wikipedia
 with the program labeled: retrieveListofBollywoodFilmsbyYear.py
 
-This program simly accessed the wikipedia website, retrieving a collection 
+This program simply accessed the wikipedia website and retrieved a collection 
 of pages chronologizing all the Bollywood films from 1970 to 2018.  The
-information provided includes the title, director, cast and genre of the film.
+information provided included the title, director, cast and genre of the film.
 
-Unfortunately, from year to year the structure of the data/page varies substantially
+Unfortunately, from year-to-year the structure of the data/page varied substantially
 both in terms of the features that are chronicled (e.g. sometimes the production house 
 is included, other times not) and in terms of the order of presentation (e.g. sometimes 
-genre is the last column, other times it is the second column.  The importance of this 
+genre is the last column, other times it is the second column).  The importance of this 
 variation is that it makes it very difficult to write a generic program to "scrape" 
 the data from the webpages for analytical purposes.  In fact, it required a great
 deal of manual editing of the html used from one page to the next so that a consistent
 set of data could be "wrangled" from the pages.
 
-Once the webpages were adjusted, a combination of Beautiful Soup and 
+Once the webpages were adjusted, a combination of Beautiful Soup, regex functions, and
+customized steps were used to extract/scrape the features for each film.
 '''
 
 import glob, os
@@ -59,7 +60,7 @@ def createDataSetFromHTMLPages(fileList):
             # Other columns were ignored because they varied substantially from year to year.
             #
             # Because several of original HTML files had multiple 'wikitable's which varied
-            # from year to year, I manually eliminated a multiples from the various pages so that there
+            # from year to year, I manually eliminated multiples from the various pages so that there
             # was only one available during the 'scraping' process
             
             filmBlock = soup.find("table", class_="wikitable")        
