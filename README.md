@@ -19,16 +19,16 @@ The data set underlying this research is in the process of being constructed.  T
 
 Each entry in the <i>Lists</i> designates a link to a wikipedia page devoted to the Bollywood films for a single year. The structure of all the links is simple (e.g. the link for 2018 is wikipedia.org/wiki/List_of_Bollywood_films_of_2018). This makes it straightforward to write a program to download each of the 50 pages in this sample, which is what I did -- see the python (3.+) program in this repository labeled <a href='https://github.com/daveking63/Six-Degrees-of-Bollywood/blob/master/retrieveListofBollywoodFilmsbyYear.py'><i>retrieveListofBollywoodFilmsbyYear.py</i></a>. Once the pages were downloaded, they were each stored in a local (HTML) file for further analysis.
 
-Each of the downloaded webpages contains an HTML table of information with each row (**<tr>...</tr>**) representing a single film, while the collection of  cells (<td>..</td>) within each row contains (at a minimum) information about the film's:
+Each of the downloaded webpages contains an HTML table of information about each of the films produced with in a given year. While the structure and content of the pages and tables varied from one decade, and often one year, to the next, all of the tables provided informaion about the following for each film:
 
 <ul>
 <li> title and an underlying HTML link to a wikipedia page devoted to that title
-<li> director
-<li> cast
+<li> director (one or more)
+<li> cast of actors (i.e. list of actors names in the film)
 <li> one or more genres describing the films (e.g. Romance, Drama, Comedy, etc.)
 </ul>
 
-I use the words "collection" and "minimum" purposively because the order, specific HTML syntax used with the cells, as well as the exact number of features included in the rows, varied substantially from one decade and often one year to the next, although the title always comes first and the other 3 features listed above are always included (with blank cells -- <td></td> denoting missing data).
+I use the words "collection" and "minimum" purposively because the order, specific HTML syntax used with the cells, as well as the exact number of features included in the rows, varied substantially from one decade and often one year to the next, although the title always comes first and the other 3 features listed above are always included (with blank cells denoting missing data).
 
 Again, a program -- <a href='https://github.com/daveking63/Six-Degrees-of-Bollywood/blob/master/bollySetUp-HTMLLists.py'><i>bollySetUp-HTMLLists.py</i></a> -- was used to extract the rows from each of the 50 tables and to create a single, consolidated table for all of the films from all of the years. A quick look at this python 3.+ program will reveal that it employs a small set of functions based on Beautiful Soup package along with a number simple text and "re" function calls. In the program, the title and it's associated page link are defined as strings, while the director, cast and genre variables are all python lists because they contain 0 or more entries.  At the moment, the results are stored row-by-row in a .txt file with the cells separated by tabs (see <a href='https://github.com/daveking63/Six-Degrees-of-Bollywood/blob/master/Bollywood_results_tabdelimited.txt'><i>Bollywood_Results_tabdelimited.txt</i></a>).
 
