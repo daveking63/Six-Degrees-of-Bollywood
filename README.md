@@ -6,9 +6,9 @@ This project looks at the social networks among the cast and directors of Bollyw
 The genesis of that intial project ,as well as this expansion, is found not only in the simple games, applications, and research revolving around the "Six Degrees of Kevin Bacon" (based on Hollywood films), but also the larger body of SNA including the concepts of degrees of separation, clustering, and small world networks:
 
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon">Six Degrees of Kevin Bacon</a>
-<li><a href="https://oracleofbacon.org/center.php">The Center of the Hollywood Universe</a>
-<li><a href="https://en.wikipedia.org/wiki/Small-world_network">Small-world Networks</a>
+<li><a href="https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon">Six Degrees of Kevin Bacon</a></li>
+<li><a href="https://oracleofbacon.org/center.php">The Center of the Hollywood Universe</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Small-world_network">Small-world Networks</a></li>
 </ul>
 
 At the moment the project and research is in the initial stage (i.e. constructing the data set for analysis). This <i>README.md</i> will be updated periodically as the project progresses.
@@ -22,14 +22,16 @@ Each entry in the <i>Lists</i> designates a link to a wikipedia page devoted to 
 Each of the downloaded webpages contains an HTML table of information about each of the films produced with in a given year. While the structure and content of the pages and tables varied from one decade, and often one year, to the next, all of the tables provided informaion about the following for each film:
 
 <ul>
-<li> title and an underlying HTML link to a wikipedia page devoted to that title
-<li> director (one or more)
-<li> cast of actors (i.e. list of actors names in the film)
-<li> one or more genres describing the films (e.g. Romance, Drama, Comedy, etc.)
+  <li>year of release</li>
+  <li>title</li>
+  <li>HTML link to a wikipedia page devoted to that title</li>
+  <li>director(s) (one or more)</li>
+  <li>cast (i.e. list of actors names in the film)</li>
+  <li>genre(s) (one or more tags denoting the type of movie, e.g. Romance, Drama, Comedy, etc.)</li>
 </ul>
-
-I use the words "collection" and "minimum" purposively because the order, specific HTML syntax used with the cells, as well as the exact number of features included in the rows, varied substantially from one decade and often one year to the next, although the title always comes first and the other 3 features listed above are always included (with blank cells denoting missing data).
 
 Again, a program -- <a href='https://github.com/daveking63/Six-Degrees-of-Bollywood/blob/master/bollySetUp-HTMLLists.py'><i>bollySetUp-HTMLLists.py</i></a> -- was used to extract the rows from each of the 50 tables and to create a single, consolidated table for all of the films from all of the years. A quick look at this python 3.+ program will reveal that it employs a small set of functions based on Beautiful Soup package along with a number simple text and "re" function calls. In the program, the title and it's associated page link are defined as strings, while the director, cast and genre variables are all python lists because they contain 0 or more entries.  At the moment, the results are stored row-by-row in a .txt file with the cells separated by tabs (see <a href='https://github.com/daveking63/Six-Degrees-of-Bollywood/blob/master/Bollywood_results_tabdelimited.txt'><i>Bollywood_Results_tabdelimited.txt</i></a>).
 
-As a next "sub-step", this program will be modified to produce a set of dictionaries and a MongoDB database to be used in analysis.
+<h3>Next Steps</h3>
+
+The next step is to convert the data into a Python dictionary and a MongoDB database that can be used to construct one or more graphs that can be used to represent the relationships among the actors and directors and to analyze these relationships from a social network perspective.
