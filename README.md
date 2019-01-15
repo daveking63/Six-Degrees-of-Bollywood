@@ -12,7 +12,9 @@ The genesis of my initial work, as well as this expansion, is found not only in 
 The project involves three intertwined phases. The first phase focuses on the creation of the data set on which the SNA analysis is based along with a brief statistical overview of the data set. The second phase is devoted to a SNA of this dataset -- looking primarily at who works with whom and who the key players are from a SNA perspective. Finally, the third phase combines this data with another data set based on 'Hindi Film Families' in order to look at the participation and influence of these families in Bollywood films. The analysis in all 3 phases is housed in 3 separate Jupyter iPython notebooks.
 
 <ol>
-    <li>SNA of Bollywood Films - Phase 1: The Dataset and Statistical Overview (completed - finally!)</li>
+    <li>SNA of Bollywood Films - Phase 1: The Dataset and Statistical Overview (completed - finally!). This can be run by accessing:
+    https://nbviewer.jupyter.org/github/daveking63/Six-Degrees-of-Bollywood/blob/master/
+    </li>
     <li>SNA of Bollywood Films - Phase 2: Participation and Influence of Directors and Actors (In process)</li>
     <li>SNA of Bollywood Films - Phase 3: The Role of Film Families in Bollywood (future date)</li>
 </ol>
