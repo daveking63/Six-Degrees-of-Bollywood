@@ -13,7 +13,7 @@ The project involves three intertwined phases. The first phase focuses on the cr
 
 <ol>
     <li>SNA of Bollywood Films - Phase 1: The Dataset and Statistical Overview (completed - finally!). This can be run by accessing:
-    https://nbviewer.jupyter.org/github/daveking63/Six-Degrees-of-Bollywood/blob/master/
+    https://nbviewer.jupyter.org/github/daveking63/Six-Degrees-of-Bollywood/blob/master/6_Degrees_of_Bollywood_Phase_1.ipynb
     </li>
     <li>SNA of Bollywood Films - Phase 2: Participation and Influence of Directors and Actors (In process)</li>
     <li>SNA of Bollywood Films - Phase 3: The Role of Film Families in Bollywood (future date)</li>
